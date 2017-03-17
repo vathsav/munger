@@ -2,5 +2,6 @@
 *.class
 node_modules/
 collected_data/
+java/
 firebaseConfig.js
-poliparser.js
+utils.js
