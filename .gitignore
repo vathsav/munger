@@ -3,5 +3,5 @@
 node_modules/
 collected_data/
 java/
-firebaseConfig.js
+config.js
 utils.js

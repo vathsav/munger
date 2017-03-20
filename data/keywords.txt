@@ -828,11 +828,11 @@ lagunAria; tower; Venice; station; ropeway; red
 museum; Bergamo; castle
 government of the landscaped factors; support to the plan choices; emergence of centrality; vitality and attractiveness indices; fields of intervention; basins sensitivity of urban-landscape
 Lombardia; whole city; regional network; second railway junction; master plan; Farini area
-design; street; lamp; industrial; diversification; process; public; light; economic; crisis; modularitÃ 
+design; street; lamp; industrial; diversification; process; public; light; economic; crisis; modularitÃ
 hydrogels; central nervous system; collagen; 17-beta-estradiol; cell housing; drug delivery
 greenways; green belt; canal
 station; Bologna; great building; lighting design; public space; mobility
-water ecology; ecosostenibitÃ ; reuse; recycling; reuse; environmental impact; lightweight; pocket-sized; small
+water ecology; ecosostenibitÃ ; reuse; recycling; reuse; environmental impact; lightweight; pocket-sized; small
 nanoparticles; pulsed laser ablation; gold; silver; plasma diagnostics; fast imaging; scanning and trasmission electron microscopies; Raman spectroscopy; SERS effect
 thermoelastic stress analysis; infrared strain gauges; stress measurement
 music; children; school
@@ -2081,7 +2081,7 @@ electrospinning; skeletal muscle tissue; contact guidance
 Lecco; university; technology; science; european university; Spluga; accessibility; railway transport; landscape
 Abuquir; Egypt; archeological promenade; fort
 Abuqir; Egypt; Nelson island; archeological promenade
-attrattivitÃ ; competitivitÃ ; innovazione
+attrattivitÃ ; competitivitÃ ; innovazione
 earthquake; reconstruction; city; new town
 bike sharing; bicycle; urban mobility
 injection
@@ -2136,7 +2136,7 @@ modern architecture; CIAM (International Congress of Modern Architecture; fordis
 democratic school
 Mestre; urban tissue; inclusion
 social housing; new model of housing; cheap; social
-faÃ§ade; decay; urbano; aesthetics; sostenibilitÃ ; fading; moss; pollution; texture; pattern
+faÃ§ade; decay; urbano; aesthetics; sostenibilitÃ ; fading; moss; pollution; texture; pattern
 laboratory; workshop; exhibit; design; strategy
 Cemetery; shallalat; Chatby; laboratories
 real estate; isovalue soil maps; Gis evaluation
@@ -3076,7 +3076,7 @@ born global firms; international new ventures; rapid internationalization; entre
 museum; communication; interactivity; multimedia; Giuseppe Pellizza da Volpedo; new media; sensitive environment; online museum
 venture capital; renewable energies; Italy; China
 infomobility; coordination; network; ITS
-hospital; cittÃ  della salute; healthcare; architecture
+hospital; cittÃ  della salute; healthcare; architecture
 WBV; apparent mass of human body
 Alzheimer cafÃ¨; non pharmacological therapy; fluid interior design; color therapy
 fire
@@ -3738,7 +3738,7 @@ office; comfort; plants; tillandsia; felt; modular; sound absorber
 self production; D.I.Y.; do it yourself; open source; 3D printing; makerbot; creative commons; fab lab; laser cutting; music; fanzine; peer to peer; P2P; reprap; vectorealism; ponoko; home fabbing
 droplet impact; liquid film; splashing; volume of fluid method VOF; dynamic mesh refinement; openfoam
 monastery; glass roof covering; textile materials; architectural recovery
-ItÃ lica; Hadrian; Trajan; museum; archeology; Limes; horizontality; excavation
+ItÃ lica; Hadrian; Trajan; museum; archeology; Limes; horizontality; excavation
 wood; concrete
 carton joint; carton surfaces connector; surfaces connector; carton tool
 suburbs; enclosure; urban edge; urban islands; ground; green system
@@ -4198,7 +4198,7 @@ Campus Bocconi; student housing; headquarter; university
 T/R thrust reverser (inversore di spinta); target type; tipo di thrust reverser
 typography; community; web; video; audiovisual; interaction; interactive;  storytelling; promotion
 aerogenerators; CPLambda; predictive control; RHC; LQR non homogeneous; LQR homogeneous; LIDAR
-UniversitÃ  Bocconi; headquarter; student residence; social housing
+UniversitÃ  Bocconi; headquarter; student residence; social housing
 UNESCO; protected areas; ecotourism; sustainable development
 task light office
 gust loads; discrete gust; reduction process; design philosophy;_x000D_
@@ -4360,7 +4360,7 @@ stent; PCL; magneium alloy AZ31; coating; degradation; cardiovacular deseases
 carbothermal reduction; ISRU; oxygen; moon; process
 QPE; EFPE; NE; game theory; extensive form games; Nash equilibria; zero sum games
 Dip Pen nanolithography; functionalized oligonucleotides; polymer substrate; DNA nanoarray
-hydrogen; solid state hydrogen storage; lithium borohydride;Â cadmium borohydride;Â planetary ball milling; X ray powder diffraction; Sieverts; mass spectrometry
+hydrogen; solid state hydrogen storage; lithium borohydride;Â cadmium borohydride;Â planetary ball milling; X ray powder diffraction; Sieverts; mass spectrometry
 SIFT; SURF; Fourier-Taylor; Mellin transform; depth map; similarity invariant; projective geometry; features extraction
 national health service; Cameron's health reform; white paper
 bridges; concrete; wood; SuperCor; life cycle cost analysis; cost items; present value method; Sweden; traffic volumes; inflation rates; interest rate
@@ -5494,7 +5494,7 @@ Wuchang historical area; space; spatial patterns; urban planning and design in C
 landscape study centre
 electronic invoicing; financial value chain; supply chain management; supply chain collaboration; supply chain finance; cash management; order to cash cycle; banking integration
 balanced scorecard; municipality; comune di Milano; riforma Brunetta
-CittÃ  Studi; university; Politecnico di Milano; UniversitÃ  degli Studi; requalification
+CittÃ  Studi; university; Politecnico di Milano; UniversitÃ  degli Studi; requalification
 hospitality; businness; trophy asset; international standards
 sprawl; housing
 waterfront transformation; public spaces; great events; port; Barcelona; Lisbon; Genoa
@@ -5768,7 +5768,7 @@ coal; pyrolysis; thermogravimetric analysis; elemental analysis; char; kinetic m
 adaptivity; complex event processing; prediction
 thermal energy storage; concentrating solar power; ORC; organic Rankine cycle
 nanoindentation; articular cartilage; poroelasticity; creep
-cittÃ  Lombardia; Milano; Bovisa
+cittÃ  Lombardia; Milano; Bovisa
 bike+; self sustaining; metabolic efficiency; Monte Carlo method; slope estimation; pedal torque estimation
 top down; structural design
 experimental CFRP; historic masonry delamination; delamination; pull push tests
@@ -5792,7 +5792,7 @@ membrane reactor; one dimensional model Matlab; test stand; hydrogen production;
 boundary layer; large eddy simulation; spires; CFD; wind turbine; wind tunnel
 counterparty risk; EPE; RWA; risk neutral measure; expected exposure
 megaprojects; energy sector; LNG terminal; CSP plant
-Ferrovie Nord; opentrack; capacitÃ  ferroviaria;
+Ferrovie Nord; opentrack; capacitÃ  ferroviaria;
 structures; project; analysis; excel
 land consumption; Lombardia; demographic trends; urban sprawl
 computer security; layer independent taxonomy; secure software; vulnerability; security properties
@@ -6431,7 +6431,7 @@ kindergarten; library; Lisbon; landscape
 politics; political communication; words; words abuse
 navigli; Milano town planning; museum district; spread park; fences; basiliche park; park gates; spread museum; accademia; Inhotim Naoshima
 Seine; Paris; island; reconnecting territorial; landscape enhancement environmental; sustainability; landscape; France; territorial strategy
-wayfinding; hospital; signage; Istituto Clinico CittÃ  Studi
+wayfinding; hospital; signage; Istituto Clinico CittÃ  Studi
 barracks; derelict site
 San Siro; stadium; road, park; green; commercial areas; racecourse; Trenno
 riverfront; concept master planning; context analysis; feasibility study
@@ -7151,7 +7151,7 @@ story; social networks; audiovisual; conversation; user; translation
 emerging writers; literature; open source; urban activism; speakers corner; parasite; parasitism; sensible space; literary site; Milan; Repubblica Milano; zone 2; installation; bottom-up; underground; train station; metro; text; writing
 archive; fashion; marketing; culture; business; 5 sensi; app per Ipad
 community garden; urban orchard; food;  sustainability
-Italy; district organization; artigianalitÃ ; Campania; design; design centre; craftsmanship
+Italy; district organization; artigianalitÃ ; Campania; design; design centre; craftsmanship
 prison; relationship; recycle; reuse; partecipatory planning
 system design for sustainability; product service system; sustainable  mobility; solar powered vehicle; ambulance; ibrid vehicle; developing contest; India; low income contest; sustainable ambulance
 safety; toys; regulations; certifications; brands; wellness; ergonomics
@@ -7844,7 +7844,7 @@ sport; comunication; web; social network
 harmonization of accounting systems; new public management; new public governance; public administration
 Pantheon; absolute; immersive; perception; nature
 space; event; movement; report; game; performance
-CittÃ  Studi; sustainable campus; swimming pool; refurbishment; flexibility; telescopic cover
+CittÃ  Studi; sustainable campus; swimming pool; refurbishment; flexibility; telescopic cover
 lean; supermarket; assembly lines; return rate
 accounting for environmental cost; enhancement of environmental impacts; emissions; waste; water; biodiversity; materials
 vulgarization; generalization; brand; parlance common; dictionary; exhibition
@@ -8704,7 +8704,7 @@ city; landmark; modelation; landscape;  representation; extrusion; exfoliation; 
 Badel; Zagreb
 landscape architecture; green infrastructure; ecosystem; natural network;  netcity; DoÃ±ana; El Rocio; marsh
 development; recovery; municipalities; Lario; monti
-Brownfield; ironworks; Falck; footbridge; walkway; landscape; pedestrian bridge; construction site; frame structure; workshop; soil pollution; Sesto San Giovanni; industries; factories; shed; acciaierie Falck; cittÃ  della salute
+Brownfield; ironworks; Falck; footbridge; walkway; landscape; pedestrian bridge; construction site; frame structure; workshop; soil pollution; Sesto San Giovanni; industries; factories; shed; acciaierie Falck; cittÃ  della salute
 performance analysis; Villa Ghirlanda Silva
 home; modern; modernity
 slums
@@ -8922,7 +8922,7 @@ ultimate strength; deformation; R/C columns; ultimate limit states model
 exploratory interface; optimization of facet; museum and the web
 neutrons; fission; scission; Montecarlo; Terrell; multiplicity
 resonance; sweep; flexographic printing
-collisioni; dispositivo mobile; energia; gioco educativo; gravitÃ ; smartphone; touchscreen
+collisioni; dispositivo mobile; energia; gioco educativo; gravitÃ ; smartphone; touchscreen
 training sensors; power sensor; speed; cadence; power; indoor training; sensors' network; Android application; Arduino; bicycle
 simulation analysis; algorithm; load balancing; Cloud computing; virtual machine; Omnet++
 RC beams reinforced with CFRP; numerical procedure developed in MATLAB Â®; finite element procedure performed with software ABAQUS
@@ -9152,7 +9152,7 @@ context; project; harmony between empty and full; functional decomposition; tech
 seed; sprouts; degrowth; cyclical; food; urban gardens; production; role of nauture
 sport; design; sport design; nanotechnologies; design for all; Gillo Dorfles; Antonio Colombo; Daniele Leone; Alex Zanardi; second skin; hard shell; human add; human evo; play tools; high speed; sport field; summer olympics; London 2012; materials; manufacturing; suit; swimming; gloves; boxing; racket; tennis; ball; soccer
 generative design; generative art; parametric feature based modeler; procedural design
-Bergamo; CittÃ  Alta; open space system; redevelopment; residual voids; urban interstices; symbols
+Bergamo; CittÃ  Alta; open space system; redevelopment; residual voids; urban interstices; symbols
 photography; genres; codes; language; media
 font; typeface; city identity
 typography; japanese; writing systems; kanji; kana; unicode; encoding
@@ -9978,7 +9978,7 @@ hypogeum spaces; hostel; underground
 Gotham City; cinema; architecture
 depopulation of villages; Sardinia; Barigadu; Ardauli; landscape architecture; margin
 cryostat; cryocoolers; cryogenic systems; hydrogen; helium
-Rome; virtual museum; Foro Boario; Circo Massimo; Bocca della VeritÃ ; urban evolution of Rome
+Rome; virtual museum; Foro Boario; Circo Massimo; Bocca della VeritÃ ; urban evolution of Rome
 Sardinia; Villaputzu; Cagliari; nuraghi; nuraghe; museum; archeology; contemporary art
 landscape; storyboard
 belgian coast; groynes; sand nourishment; wave breakers; hard coastal defence infrastructure
@@ -10563,7 +10563,7 @@ code; identity; territorial; etnography; Sicily; pattern; line; geometry; sign; 
 furniture; light; Eileen Gray; Le Corbusier; villa Panza; Serpentine gallery
 design bookstore; service; user research; experience; information acquire
 sustainable design; China periurban community; China periurban school; PSSD
-domestic traditional art museum; serviceÂ systemÂ design; young cluster; _x000D_
+domestic traditional art museum; serviceÂ systemÂ design; young cluster; _x000D_
 visiting experience
 disability; hearing loss; hearing aids
 Montaigne; essays; illustration; semiotics; Peirce; Greimas; translation
@@ -10742,7 +10742,7 @@ selective catalytic reduction (SCR); Fe zeolite; standard SCR reaction; chemical
 Shanghai; Waitanyuan; China; waterfront; library; museum
 city hall; sustainable; public space
 MEMS microphones array; embedded system; uniform linear array; Capon algorithm; MVDR method; beamforming techniques; acoustic source localization
-project; requalification; waterfront; San SebastiÃ n; culture; fishing
+project; requalification; waterfront; San SebastiÃ n; culture; fishing
 sustainability; urbanism; microclimate; design methodology
 gravity; gravimetry; inverse gravimetric problem; Bayesian inference
 finite element modeling; corrosion damage; biodegradable; intravascular
@@ -11514,7 +11514,7 @@ Cloud computing; model driven engineering; optimization; performance of IT syste
 geothermal energy; emissions; methane abatement
 social media; sentiment analysis; Web 2.0; Web analytics; Web marketing
 food quality; expected quality; prepackaged food labels; quality measurement system; choice based conjoint analysis
-re-cladding; CittÃ  Studi; sustainable campus; Politecnico of Milan; building shadows study; perforated sheet
+re-cladding; CittÃ  Studi; sustainable campus; Politecnico of Milan; building shadows study; perforated sheet
 weldline; short glass fiber; composite material; fiber orientation
 key performance indicators; performance management
 bandwith allocation; resource allocation; integer programming; linear programming; telecommunication traffic; max-min fairness
@@ -11637,7 +11637,7 @@ Ge/SiGe quantum well; electro-optic phase modulator; quantum confined Stark effe
 shaft; transmission: bicycle; chainless; recovery; kinectic; energy; braking; bevel gear
 Cahn-Hilliard; Cahn-Hilliard-Oono; nonlocal; Cahn-Hilliard-Bertozzi; diblock copolymers; image inpainting; phase separation; pattern
 degradation; polimers; PVC; ABS; LLDPE; HDPE; PP; photo oxidation; FTIR spectroscopy; scratch test
-impianto idraulico; elicottero; affidabilitÃ ; processo di safety; alberi di guasto; allocazione requisiti; fattori umani
+impianto idraulico; elicottero; affidabilitÃ ; processo di safety; alberi di guasto; allocazione requisiti; fattori umani
 time optimality; Pontryagin minimum principle; bang bang control; Coriolis mass flow meter; speed gradient control; sliding mode observer; recursive least square
 mobile commerce; mobile payment; mobile identity; value added services; mobile wallet; telecommunication; mobile netwrok operator
 large eddy simulation; LES; OpenFoam; plane channel flow; flow past a square section cylinder
@@ -12415,7 +12415,7 @@ disaster; innovation; Chicago; Gibellina; Santiago; progress
 violin; ontology; music information retrieval; high level features
 phonetic alignment; forced alignment; audio segmentation; annotation
 Cannero; castle
-BogotÃ ; urbanscape; territorial interpretation; urban design; city vision
+BogotÃ ; urbanscape; territorial interpretation; urban design; city vision
 project investment evaluation; renewable energy in electricity generation; real option model
 microfinance; regular repayment schedule; India; frequency; repayment performance
 tourism; Granada
@@ -12558,7 +12558,7 @@ prototyping; application; communication;  touch-based; elderly; social support; 
 Villa Adriana; Tivoli; archeological site; museum; theatre; scenography
 Palazzo della Ragione di Milano; climatic comfort; comfort; Termography; Heating; conservation; psychrometry
 informality; formalization; titling; land tenure; upgrading
-Hadrian's Villa; Villa Adriana; Great Hadrian's Villa; Roccabruna; fire brigades' barracks; StoÃ ; Tempe's Valley; Piazza d'Oro; masterplan Villa Adriana; Zenobia's valley; territorial development
+Hadrian's Villa; Villa Adriana; Great Hadrian's Villa; Roccabruna; fire brigades' barracks; StoÃ ; Tempe's Valley; Piazza d'Oro; masterplan Villa Adriana; Zenobia's valley; territorial development
 slow city; agriculture; Beijing
 architecture; client; relationship; China; customer; designer; architect
 climate change; local government; municipality; governance; Bologna; transnational municipal networks; covenant of mayors; national government;  environmental policy; green economy; biodiversity; waste management
@@ -14362,7 +14362,7 @@ raw earth; ecovillage; Alentejo; Portugal; permaculture; landascape
 industrial park; industrial symbiosis; industrial architecture; industrial architecture renaissance
 ancient monuments; building preservation trusts; charitable trusts; conservation areas; cultural heritage; listed buildings; local plan; preservation; protection; scheduled monuments; societies; sponsorships; trust
 urban kibbutz; Tel-Aviv
-Berlin; AgorÃ ; infrastructure; void; urban scape; genius loci
+Berlin; AgorÃ ; infrastructure; void; urban scape; genius loci
 reuse; redevelopment; industrial heritage
 packaging; design; food; communication; food styling; representation; narration; misleading
 build a professional association; ensure the quality of food; increase the confidence of consumers; protect the traditional culture; make up at the same contemporary tradition
@@ -15029,7 +15029,7 @@ reuse; industrial archaeology
 risk analysis; galvanic industry; dispersion; aluminum oxidation; aluminum anodizing
 micro-cogeneration; TANDEM T20; efficiency; uncertainty; pollutants; grid simulator
 permeability; asphalt mix
-Haptic; Virtuose6D; realtÃ  virtuale; Unity3D; MiddleVR
+Haptic; Virtuose6D; realtÃ  virtuale; Unity3D; MiddleVR
 beam monitor; commercial CMOS sensor; X imaging system
 blindness; deafblindness; braille; haptic display; Braille display; electrocutaneous stimulation; flyback transfomer; skin receptors; PSoC; PI controller; electrotactile; electrostatic
 asylum; mental hospital; recovery; urban regeneration; refunctionalization
@@ -16097,7 +16097,7 @@ community garden; organizational structure; social network; Milan
 Poland; military area; Gora Kalwaria; urban regeneration
 museum; contemporary art; Palazzo Riso; Sicily; art collection; expansion; extension; Marvuglia
 Poveglia; Venice; high density hotel; public space; utopia
-Lecco; open spaces; La Piccola VelocitÃ ; urban renewal
+Lecco; open spaces; La Piccola VelocitÃ ; urban renewal
 International congress centre Berlin; adaptive reuse; Berlin
 historic town; hedonic prices; evaluation; value; Perugia; Bologna; Trieste
 cultural and creative industries; creative city; development of small and medium sized cities; European capital of culture; European Union policies for culture
@@ -16347,7 +16347,7 @@ multimodal hub
 Macau; Compasso Volante prize; parameterization; sandwich; natural ventilation; comfort; zinc-titanium; augmented reality
 automotive; citycar; car
 lectures in the public space; interactions; studying and walking; historical building
-theatre; relationship; church; CÃ didavid; memory
+theatre; relationship; church; CÃ didavid; memory
 technology; 3D; materials; concrete; jewelry; makers; digital; future; fashion
 research center; agriculture; experimental greenhouse
 enterprise risk management; performance measurement system; risk; key performance indicator; key risk indicator
@@ -16513,7 +16513,7 @@ Tiburtina station; Rome; flows; spatial design
 mechanical design; cork wire hoods; automatic machine; servomotors
 urban voids; in-between spaces; urban green; parasite; island; public space; kiosk; crosswalk
 QFD; AHP; distance learning MBA; e-learning management systems
-design fiction; attivitÃ  di foresight; future studies; action research; critical design; speculative design; Taipei; Cern
+design fiction; attivitÃ  di foresight; future studies; action research; critical design; speculative design; Taipei; Cern
 clothes; retail; rent; communication
 houses; balilla; fascism; Costantini; manuals
 quartz crystal microbalance; MR damper; smart damper
@@ -16534,7 +16534,7 @@ multimedia filter; pressure vessel; GRP; glass reinforced plastic; design
 reconstruction; interior; exibition
 project; Villa Adriana; Tivoli; Antiquarium; museum; archeology
 innovation; innovation in SMEs; innovation management; European supportive actions
-Villa Panza; deconstruction of space; natural light; shadow; inverted reality; transparency; reflection; sustainability; ecology; green roof; conservation of space; Heritage; cube; frame; layers; overlapping perspective; folding; floating; flying;  abstract; virtual image; pavilion; park; urban planning; sculpture gardens; follies;  history of architecture; Canon Ã  LumiÃ¨re; place to contemplate; distortion; waterfront; iceberg; waves and wavelengths; sea; sky; ground; illusion; confusion; panoramic view; inclined space; ramp; Japanese culture; Yin Yang; Zen; tatami; concrete; wood; glass; public space; open space; tea ceremony; meditation; shelter; landscape; ventilation; hydraulic; water sound; cold; lukewarm; warm; sensations
+Villa Panza; deconstruction of space; natural light; shadow; inverted reality; transparency; reflection; sustainability; ecology; green roof; conservation of space; Heritage; cube; frame; layers; overlapping perspective; folding; floating; flying;  abstract; virtual image; pavilion; park; urban planning; sculpture gardens; follies;  history of architecture; Canon Ã  LumiÃ¨re; place to contemplate; distortion; waterfront; iceberg; waves and wavelengths; sea; sky; ground; illusion; confusion; panoramic view; inclined space; ramp; Japanese culture; Yin Yang; Zen; tatami; concrete; wood; glass; public space; open space; tea ceremony; meditation; shelter; landscape; ventilation; hydraulic; water sound; cold; lukewarm; warm; sensations
 science and society; digital methods; Twitter; data visualization; climate change
 interpersonal relationship; personal branding; mentalism; application; edutainment; experiential
 natural light; traveller; pause; intermissin; street art; Lancetti; time; urban behaviour
@@ -16743,7 +16743,7 @@ solid recovered fuel (SRF); municipal solid waste (MSW); mechanical and biologic
 topsoil; characterisation; decommissioning; CeSNEF; Lâ€“54M; spectrometry; gamma; Cerenkov
 composite materials; reversible cross-linking: rDA chemistry; carbon fibres; manufacturing process; powder impregnation; mechanical testing
 sandwich structure; EPS; Dryvit; lightweight structure
-renovation; refurbishment; retrofit; walkway; thermal comfort; sefaira; cittÃ  studi; swot; museum design; sensitivity analysis; Rayman; mean radiant temperature
+renovation; refurbishment; retrofit; walkway; thermal comfort; sefaira; cittÃ  studi; swot; museum design; sensitivity analysis; Rayman; mean radiant temperature
 gas turbine exhaust axial diffuser; steady measurements; unsteady measurements; traversing; five holes probes; hot wire anemometry
 regulation; CPQRA; risk analysis; comparison; common method
 aeroelasticity; compressor blisks; flutter; interblade phase angle; time linearized method; Navier-Stokes equations; axial compressor; CFD; mesh study
@@ -16968,7 +16968,7 @@ Wankel; OpenFOAM; CFD; mesh-to-mesh interpolation; automatic mesh generation
 modularisation; ontology; decision-making; impact; barrier; enabling factor
 ESCOs; energy efficiency; energy upgrading
 lab-on-chip platform; MTJ-based biosensors
-propulsione ibrida; paraffina; misure di densitÃ ; balistica; entrainment
+propulsione ibrida; paraffina; misure di densitÃ ; balistica; entrainment
 mathematical model; blood pressure; long term regulation; blood volume control
 knee; finite element; sensitivity; soft tissues; kinetics; kinematics
 social media analysis; Facebook; Big Five; job recommendation system; personality assessment
@@ -17377,7 +17377,7 @@ QT8; Milan; landscape; urban design; architecture
 assessment; valuation; urban regeneration; revaluation; railway stations; milan; SWOT analysis; multicriteria analysis; multi methodological analysis
 Detroit; postfeminism criticality mapping
 transition; Milan
-social housing; nursery; cafÃ¨; CittÃ  Studi; campus; Milan; housing; city users
+social housing; nursery; cafÃ¨; CittÃ  Studi; campus; Milan; housing; city users
 New York; gentrification; Brooklyn
 landscape; restoration; cycling; tourism; active citizenship
 service plan; public space
@@ -17565,7 +17565,7 @@ optical sensor; catenary pantograph interaction; current collection; electric ar
 CFD; inertial filter; Mars; MicroMed; two phase flow
 productivity; ICT investment; digital technology; value added; labour productivity; EU
 modular case; prefabricated; estimated cost
-The RotÃ ri-Cartolari villa; Verona's villas; Fifteenth century villas; Forgotten mansion; Construction phases of Verona's villas; Development of the structure of the villas, Typology of the settlement system of the villa; Historical-archival research; Archival documents
+The RotÃ ri-Cartolari villa; Verona's villas; Fifteenth century villas; Forgotten mansion; Construction phases of Verona's villas; Development of the structure of the villas, Typology of the settlement system of the villa; Historical-archival research; Archival documents
 smart; eco building; solar energy; scheme design; Covenant of mayors
 volunteer computing; grid computing; OpenStack; MAAS
 rotary cutting machine; modal analysis; vibration analysis
@@ -17589,7 +17589,7 @@ luxury; fashion; replenishment strategy; supply chain
 simulation dynamics; energyPlus; bestenergy
 customer centricity; financial services; insurance; NPS
 business model; strategic performance measurement; balanced scorecard
-Palazzo CiviltÃ  Italiana; Rome; EUR; Expo; refurbishment; sustainable
+Palazzo CiviltÃ  Italiana; Rome; EUR; Expo; refurbishment; sustainable
 Linear Delta; Agile Eye; spherical wrist ; combined robot; 2k factorial design; Monte carlo simulations; kinematical modelling; end effector; positioning; anova; minitab software; tilting error; two level design
 HRTF; adaptation; training; individualization; non-individualized HRTF; interface
 CRM; customer relationship management; customer; Ducati; IT; customer satisfaction; customer loyalty
@@ -18224,7 +18224,7 @@ flat roofs; green roofs; cool roofs; OSB; XPS; performance decay; degrade; WUFI
 workflow management system; BPMN 2.0; performance; benchmarking
 LTE; WiFi; LTE-U; converged control
 combined cycle power plant; thermodynamic model; operational flexibility; exergy analysis; minimum environmental load
-adaptive reuse; retrofit; sostenibilitÃ 
+adaptive reuse; retrofit; sostenibilitÃ
 asymmetric traffic assignment; path based algorithms; projection method
 electricity markets; ancillary services; _x000D_
 power fluctuations; attribution mechanisms
@@ -18393,7 +18393,7 @@ energy efficiency; thermal efficiency; investments; energy services
 supply chain; disruption; risk management; resilience; flexibility; redundancy; mitigation; robustness; model; mathematical programming
 electric power market; nodal spot model; optimal power flow; transmission network
 tracking; device-free localization; multi-target
-cognitive disability; autism; smart space; smart object; touchless motion based; Kinect; abilitÃ 
+cognitive disability; autism; smart space; smart object; touchless motion based; Kinect; abilitÃ
 data mining; hemorrhage
 22MnB5; LH800; press hardening; hydroforming; hot metal gas forming; ultra high strength steel (UHSS)
 calcium phosphate; electrodeposition; coating; scale up; metal beck
@@ -19107,7 +19107,7 @@ stent; iron; coronary; biodegradable; coating; PCL; characterization; design
 movie turism; movie induced tourism; movie tours; Italy; cinema; landscape
 protection; safety; sport; Helmet; bicycle; cyclism
 biogas; biogas upgraging; economic optimization; water scrubbing; BzzMath; BzzGetGoodExperiments; absorption column; economical index; carbon dioxide absorption; PROII; simsci; modelling
-universitÃ ; Milano; Bocconi; Cattolica; Politecnico
+universitÃ ; Milano; Bocconi; Cattolica; Politecnico
 recommender systems; user profiles; modeling methods; dataset; PoliMovie; genre; cast; director; movie; matrix; user-feature; user-item
 phase locked loops; phase locked loops; coordinated control; PID; LQR; feedforward
 axial steam turbine; one and a half stage; traversing; performance measurements; pressure probes; thermocouples; efficiency; uncertainty propagation; detailed measurements; three holes probes; stationary probes; labyrinth seals; brush seals
@@ -19368,7 +19368,7 @@ green chemistry; chemical from biomass; muconic acid; pyrans; Diels-Alder synthe
 Hall effect; rotary sensor position IC; linear sensor position IC; CMOS Hall sensor; process flow; test flow; IMC; Hall plate; offset; sensitivity mismatch; thermal drift; Melexis; automotive; probing; yield; process performance
 distribution; agriculture; local
 invoice
-mountains; architectural enhancement; ospitalitÃ  diffusa; service; marginality
+mountains; architectural enhancement; ospitalitÃ  diffusa; service; marginality
 urban quality; pedestrian; public space; retail
 composites; damage; simulation
 big data applications; data intensive applications; model driven engineering; domain specific languages; architecture framework; DICE
@@ -19410,7 +19410,7 @@ crib; bed; baby; kid; design
 magnetoresistance; biosensor; lab-on-chip; molecular recognition; nanoparticles
 safety; urban interiors; cityscape
 system; connection, magnetic; magnets
-violence; architecture; weapon; conflict; combat; political; instrument; city; urbanism; ferocious; BogotÃ 
+violence; architecture; weapon; conflict; combat; political; instrument; city; urbanism; ferocious; BogotÃ
 psychic distance; M&A; crossborder acquisition; CEO experience; ownership; international experience
 coronary arteries; stent; 3D reconstruction; computational fluid dynamics; optical coherence tomography
 dish Stirling system; microcogeneration; CSP; Stirling engine
@@ -19760,7 +19760,7 @@ sustainability; desert climates; library; Ecotect
 Arena; Stadium; Expo 2015; post-Expo; Milan; masterplan; sport center; football; truss structure
 transportation safety; road safety
 Castelseprio; Torba; Varese; archaeology; longobards; paths; preservation; open air museum
-CittÃ  Studi; sustainable campus; swimming pool; refurbishment; flexibility; telescopic cover
+CittÃ  Studi; sustainable campus; swimming pool; refurbishment; flexibility; telescopic cover
 reuse; opportunity; regeneration; abandoned; disuse; strategies; multifunctionality; urban regeneration
 magazzini raccordati; re-use; re-qualification; restore; central station; Via Sammartini
 pump; micromed; Mars; measurement; performance; vacuum
@@ -19934,7 +19934,7 @@ museum; exhibition; war; consolidation; reutilization
 library; Berlin; Luisenstadt
 Rimini; holiday camp
 central station; Milan; reuse; archive; hospitality
-Lisbon; Manuel de SolÃ  Morales; design for aging; Largo do Rato; urban project
+Lisbon; Manuel de SolÃ  Morales; design for aging; Largo do Rato; urban project
 metabolism; urbanism
 ex-Agricultural Cooperative of Lodi; station area potential; silos; museum; boardwalk; Renzo Piano
 urban planning; Bovisa; landscape; building;  integration
@@ -20318,7 +20318,7 @@ biomimetics; 3D printing; cortical bone; molecular dynamics; LAMMPS; photopolyme
 electrical vehicles; AC and DC charging stations; charging interface; charing standards
 WEF Nexus; energy modeling; Egypt; Nile basin; statistical forecast; scenario analysis
 VRFB; flow battery; cathodic electrode; energy storage; experimental study; mathematical model
-globalizzazione; localizzazione; brand management; identitÃ  del brand; Singapore
+globalizzazione; localizzazione; brand management; identitÃ  del brand; Singapore
 schadenstisch; quick claim; vehicle identification number; knowledge management; total quality management; model year
 smart retractor; pressure; sensors
 drag area; sport aerodynamics; cycling
