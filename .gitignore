@@ -3,5 +3,4 @@
 node_modules/
 collected_data/
 java/
-config.js
 utils.js

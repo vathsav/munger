@@ -20,7 +20,7 @@ const reader = readline.createInterface({
   output: process.stdout
 });
 
-const keywords = fs.readFileSync('data/keywords.txt', 'utf8', function(err, data) {
+var keywords = fs.readFileSync('data/keywords.txt', 'utf8', function(err, data) {
   if (err) console.log(err);
 });
 
@@ -32,7 +32,7 @@ var listOfCourses = courses.split('\n');
 var listOfKeywords = keywords.split('\n');
 var numberOfTheses = listOfCourses.length;
 
-var pandapandapanda = {};
+var keywords = {};
 var invalidCharacters = ['.', '#', '$', '/', '[', ']'];
 
 /*
@@ -50,7 +50,6 @@ var invalidCharacters = ['.', '#', '$', '/', '[', ']'];
   	}]
   }]
 */
-
 
 reader.question('Percentage of theses to push: ', (percentage, err) => {
   if (err)
@@ -81,27 +80,27 @@ function pushEm(percentage) {
       });
 
       // Check if keyword is already present in the object
-      if (pandapandapanda[keyword] != undefined) {
+      if (keywords[keyword] != undefined) {
         // Check if the course has already been encountered for this keyword
-        var pandaWord = JSON.stringify(pandapandapanda[keyword]);
+        var pandaWord = JSON.stringify(keywords[keyword]);
         pandaWord = pandaWord.substring(1, pandaWord.length - 1);
 
-        if (pandapandapanda[keyword][course] != undefined) {
+        if (keywords[keyword][course] != undefined) {
           // The course has already been encountered for this keyword. So get the count, and increment it.
-          var count = pandapandapanda[keyword][course] + 1;
-          pandapandapanda[keyword] = JSON.parse('{ ' + pandaWord + ', "' + course + '": ' + count + ' }');
+          var count = keywords[keyword][course] + 1;
+          keywords[keyword] = JSON.parse('{ ' + pandaWord + ', "' + course + '": ' + count + ' }');
         } else {
           // First encounter for a particular course
-          pandapandapanda[keyword] = JSON.parse('{ ' + pandaWord + ', "' + course + '": ' + 1 + ' }');
+          keywords[keyword] = JSON.parse('{ ' + pandaWord + ', "' + course + '": ' + 1 + ' }');
         }
       } else {
         // Encountering the keyword for the first time
-        pandapandapanda[keyword] = JSON.parse('{ "' + course + '": ' + 1 + '}');
+        keywords[keyword] = JSON.parse('{ "' + course + '": ' + 1 + '}');
       }
     });
   }
 
-  firebase.database().ref('keywords').set({pandapandapanda});
+  firebase.database().ref('/').set({keywords});
 
   console.log("Push successful!");
 }
