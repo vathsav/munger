@@ -51,12 +51,17 @@ var invalidCharacters = ['.', '#', '$', '/', '[', ']'];
   }]
 */
 
-reader.question('Percentage of theses to push: ', (percentage, err) => {
-  if (err)
-    console.log(err);
+function ask() {
+  reader.question('Percentage of theses to push: ', (percentage, err) => {
+    if (err)
+      console.log(err);
     pushEm(percentage);
-  reader.close();
-});
+    reader.close();
+    ask();
+  });
+}
+
+ask();
 
 function pushEm(percentage) {
   for (var i = 0; i < (numberOfTheses / 100) * percentage; i++) {

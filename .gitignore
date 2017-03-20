@@ -2,5 +2,4 @@
 *.class
 node_modules/
 collected_data/
-java/
-utils.js
+config.js
