@@ -1,7 +1,21 @@
-const firebase = require("firebase");
+const credentials = require('./config.js');
+const excel = require('excel');
+const firebase = require('firebase');
+var list = require('select-shell')({
+    pointer: ' ▸ ',
+    pointerColor: 'yellow',
+    checked: ' ◉  ',
+    unchecked:' ◎  ',
+    checkedColor: 'green',
+    msgCancel: 'No selected options!',
+    msgCancelColor: 'orange',
+    multiSelect: true,
+    inverse: true,
+    prepend: true
+  }
+);
+const ora = require('ora');
 const readline = require('readline');
-const credentials = require("./config.js");
-const fs = require('fs');
 
 // Initialize Firebase
 var config = {
@@ -15,61 +29,87 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 
-const reader = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-var keywords = fs.readFileSync('data/keywords.txt', 'utf8', function(err, data) {
-  if (err) console.log(err);
-});
-
-const courses = fs.readFileSync('data/courses.txt', 'utf8', function(err, data) {
-  if (err) console.log(err);
-});
-
-var listOfCourses = courses.split('\n');
-var listOfKeywords = keywords.split('\n');
-var numberOfTheses = listOfCourses.length;
-
-var keywords = {};
 var invalidCharacters = ['.', '#', '$', '/', '[', ']'];
+var numberOfSheets = 1;
+var data;
+var columnData;
+
+var spinner = ora('Chunking your data').start();
+spinner.color = 'yellow';
+
+excel('data/data.xlsx', numberOfSheets, function(err, cells) {
+  if(err) spinner.fail('Failed to parse data');
+  spinner.succeed('Data read successfully');
+  data = cells;
+
+  // Display the column titles
+  displaySelector(data[0]);
+});
 
 /*
-  TODO something like this?
-    [{
-  	"milan": [{
-  		"design": {
-  			"something": 30,
-  			"somethingElse": 40
-  		},
-  		"engineering": {
-  			"something": 30,
-  			"somethingElse": 40
-  		}
-  	}]
-  }]
+  TODO Include keys for departments
 */
 
-function ask() {
-  reader.question('Percentage of theses to push: ', (percentage, err) => {
+function askCount() {
+  const reader = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+  reader.question('\nEnter the number of records to parse: ', (count, err) => {
     if (err)
       console.log(err);
-    pushEm(percentage);
+    constructJSON(count);
     reader.close();
-    ask();
   });
 }
 
-ask();
+var displaySelector = function(titles) {
+  // Push each title to the list
+  titles.forEach(function(title, index) {
+    if (title.length != 0)
+      list.option(title);
+  });
 
-function pushEm(percentage) {
-  for (var i = 0; i < (numberOfTheses / 100) * percentage; i++) {
+  list.on('select', function(choices) {
+    getColumnData(titles, choices);
+  });
+
+  list.on('cancel', function(choices) {
+    console.log("Cancelled!");
+  });
+
+  list.list();
+}
+
+var getColumnData = function(titles, choices) {
+  columnData = new Array(choices.length);
+
+  for (var i = 0; i < choices.length; i++) {
+    columnData[i] = new Array(20);
+
+    // Figure out the length of this array
+    data.forEach(function(datum, index) {
+      // TODO UUUHHHM.
+      columnData[i][index] = datum[titles.indexOf(choices[i].value)];
+    });
+  }
+
+  askCount();
+}
+
+function constructJSON(count) {
+  var listOfCourses = columnData[0];
+  var listOfKeywords = columnData[1];
+  var keywords = {};
+
+  // Omit the titles of the columns. Iterate from index 1.
+  for (var i = 1; i < count; i++) {
     var course = listOfCourses[i];
-    var arrayOfKeywords = listOfKeywords[i].split("; ");
+    var arrayOfKeywords = listOfKeywords[i].split('; ');
 
     if (course.length == 0)
-      course = "Error";
+      course = 'Error';
 
     arrayOfKeywords.forEach(function(keyword, index) {
       // Ditch invalid characters Keys must be non-empty strings and can't contain ".", "#", "$", "/", "[", or "]"
@@ -105,7 +145,12 @@ function pushEm(percentage) {
     });
   }
 
-  firebase.database().ref('/').set({keywords});
-
-  console.log("Push successful!");
+  firebase.database().ref('/').set(keywords)
+    .then(function() {
+      console.log("Push successful!");
+      askCount();
+    })
+    .catch(function() {
+      console.log("Failed to push :(");
+    });
 }

@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/vathsav/poliparser#readme",
   "dependencies": {
-    "firebase": "^3.7.2"
+    "cli-spinners": "^1.0.0",
+    "excel": "^0.1.7",
+    "firebase": "^3.7.2",
+    "ora": "^1.1.0"
   }
 }
