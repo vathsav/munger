@@ -1,6 +1,5 @@
-const credentials = require('./config.js');
+const d3 = require('d3');
 const excel = require('excel');
-const firebase = require('firebase');
 var list = require('select-shell')({
     pointer: ' ▸ ',
     pointerColor: 'yellow',
@@ -16,18 +15,7 @@ var list = require('select-shell')({
 );
 const ora = require('ora');
 const readline = require('readline');
-
-// Initialize Firebase
-var config = {
-  apiKey: credentials.apiKey,
-  authDomain: credentials.authDomain,
-  databaseURL: credentials.databaseURL,
-  storageBucket: credentials.storageBucket,
-  messagingSenderId: credentials.messagingSenderId
-};
-
-firebase.initializeApp(config);
-var database = firebase.database();
+const utils = require('./utils.js');
 
 var invalidCharacters = ['.', '#', '$', '/', '[', ']'];
 var numberOfSheets = 1;
@@ -105,7 +93,7 @@ function constructJSON(count) {
 
   // Omit the titles of the columns. Iterate from index 1.
   for (var i = 1; i < count; i++) {
-    var course = listOfCourses[i];
+    var course = listOfCourses[i].toLowerCase();
     var arrayOfKeywords = listOfKeywords[i].split('; ');
 
     if (course.length == 0)
@@ -127,30 +115,26 @@ function constructJSON(count) {
       // Check if keyword is already present in the object
       if (keywords[keyword] != undefined) {
         // Check if the course has already been encountered for this keyword
-        var pandaWord = JSON.stringify(keywords[keyword]);
-        pandaWord = pandaWord.substring(1, pandaWord.length - 1);
+        var keywordObject = JSON.stringify(keywords[keyword]);
+        keywordObject = keywordObject.substring(1, keywordObject.length - 1);
 
         if (keywords[keyword][course] != undefined) {
           // The course has already been encountered for this keyword. So get the count, and increment it.
           var count = keywords[keyword][course] + 1;
-          keywords[keyword] = JSON.parse('{ ' + pandaWord + ', "' + course + '": ' + count + ' }');
+          keywords[keyword] = JSON.parse('{ ' + keywordObject + ', "' + course + '": ' + count + ' }');
         } else {
           // First encounter for a particular course
-          keywords[keyword] = JSON.parse('{ ' + pandaWord + ', "' + course + '": ' + 1 + ' }');
+          keywords[keyword] = JSON.parse('{ ' + keywordObject + ', "' + course + '": ' + 1 + ' }');
         }
       } else {
         // Encountering the keyword for the first time
         keywords[keyword] = JSON.parse('{ "' + course + '": ' + 1 + '}');
       }
+
+      keywords[keyword].total = 0;
+      keywords[keyword].total = d3.sum(d3.values(keywords[keyword]));
     });
   }
 
-  firebase.database().ref('/').set(keywords)
-    .then(function() {
-      console.log("Push successful!");
-      askCount();
-    })
-    .catch(function() {
-      console.log("Failed to push :(");
-    });
+  utils.push('/', keywords);
 }
