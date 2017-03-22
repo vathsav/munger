@@ -20,6 +20,7 @@
     "cli-spinners": "^1.0.0",
     "excel": "^0.1.7",
     "firebase": "^3.7.2",
-    "ora": "^1.1.0"
+    "ora": "^1.1.0",
+    "select-shell": "^0.1.1"
   }
 }
