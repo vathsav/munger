@@ -1,21 +1,21 @@
 {
-  "name": "poliparser",
+  "name": "munger",
   "version": "0.1.0",
   "description": "",
-  "main": "firebaseConfig.js",
+  "main": "munger.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vathsav/poliparser.git"
+    "url": "git+https://github.com/vathsav/munger.git"
   },
   "author": "vathsav",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vathsav/poliparser/issues"
+    "url": "https://github.com/vathsav/munger/issues"
   },
-  "homepage": "https://github.com/vathsav/poliparser#readme",
+  "homepage": "https://github.com/vathsav/munger#readme",
   "dependencies": {
     "cli-spinners": "^1.0.0",
     "d3": "^4.7.3",
