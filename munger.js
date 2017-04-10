@@ -26,75 +26,53 @@ var columnData;
 var spinner = ora('Chunking your data').start();
 spinner.color = 'yellow';
 
-// excel('data/data.xlsx', numberOfSheets, function(err, cells) {
-//   if(err) spinner.fail('Failed to parse data');
-//   spinner.succeed('Data read successfully');
-//   data = cells;
-//
-//   // Display the column titles
-//   displaySelector(data[0]);
-// });
-
 /*
   TODO Include keys for departments
 */
 
-// function askCount() {
-//   const reader = readline.createInterface({
-//     input: process.stdin,
-//     output: process.stdout
-//   });
-//
-//   reader.question('\nEnter the number of records to parse: ', (count, err) => {
-//     if (err)
-//       console.log(err);
-//     constructJSON(count);
-//     reader.close();
-//   });
-// }
+var displaySelector = function(titles) {
+  // Push each title to the list
+  titles.forEach(function(title, index) {
+    if (title.length != 0)
+      list.option(title);
+  });
 
-// var displaySelector = function(titles) {
-//   // Push each title to the list
-//   titles.forEach(function(title, index) {
-//     if (title.length != 0)
-//       list.option(title);
-//   });
-//
-//   list.on('select', function(choices) {
-//     getColumnData(titles, choices);
-//   });
-//
-//   list.on('cancel', function(choices) {
-//     console.log("Cancelled!");
-//   });
-//
-//   list.list();
-// }
+  list.on('select', function(choices) {
+    const reader = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+    });
 
-// var getColumnData = function(titles, choices) {
-//   columnData = new Array(choices.length);
-//
-//   for (var i = 0; i < choices.length; i++) {
-//     columnData[i] = new Array(20);
-//
-//     // Figure out the length of this array
-//     data.forEach(function(datum, index) {
-//       // TODO UUUHHHM.
-//       columnData[i][index] = datum[titles.indexOf(choices[i].value)];
-//     });
-//   }
-//
-//   askCount();
-// }
+    reader.question('\nEnter the number of records to parse: ', (count, err) => {
+      if (err)
+        console.log(err);
+      constructJSON(columnData.length, choices);
+      reader.close();
+    });
+  });
+
+  list.on('cancel', function(choices) {
+    console.log("Cancelled!");
+  });
+
+  list.list();
+}
 
 fs.readFile('data/data.csv', 'utf8', function (err, data) {
   if(err) spinner.fail('Failed to parse data');
   spinner.succeed('Data read successfully');
   columnData = d3.csvParseRows(data);
-  constructJSON(columnData.length);
+
+  var titles = [];
+
+  // Display the column titles
+  for (var i = 0; i < columnData[0].length; i++)
+    titles.push(columnData[0][i]);
+
+  displaySelector(titles);
 });
 
-function constructJSON(count) {
+function constructJSON(count, choices) {
   var listOfCourses = [];
   var listOfKeywords = [];
 
