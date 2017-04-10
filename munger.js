@@ -18,13 +18,13 @@ const ora = require('ora');
 const readline = require('readline');
 const utils = require('./utils.js');
 
-var invalidCharacters = ['.', '#', '$', '/', '[', ']', '\n'];
+var invalidCharacters = ['.', '#', '$', '/', '[', ']', '\n', '\r'];
 var numberOfSheets = 1;
 var data;
 var columnData;
 
-// var spinner = ora('Chunking your data').start();
-// spinner.color = 'yellow';
+var spinner = ora('Chunking your data').start();
+spinner.color = 'yellow';
 
 // excel('data/data.xlsx', numberOfSheets, function(err, cells) {
 //   if(err) spinner.fail('Failed to parse data');
@@ -88,8 +88,10 @@ var columnData;
 // }
 
 fs.readFile('data/data.csv', 'utf8', function (err, data) {
+  if(err) spinner.fail('Failed to parse data');
+  spinner.succeed('Data read successfully');
   columnData = d3.csvParseRows(data);
-  constructJSON(10);
+  constructJSON(columnData.length);
 });
 
 function constructJSON(count) {
@@ -97,18 +99,17 @@ function constructJSON(count) {
   var listOfKeywords = [];
 
   for (var i = 0; i < count; i++) {
+    if (columnData[i][1].includes(',')) {
+      // Make sure
+      columnData[i][1].replace(',', ';');
+    }
     listOfCourses.push(columnData[i][0]);
     listOfKeywords.push(columnData[i][1]);
   }
 
   var keywords = {};
-  console.log(listOfCourses);
-  console.log(listOfKeywords);
-
   // Omit the titles of the columns. Iterate from index 1.
-
   for (var i = 1; i < count; i++) {
-
     var course = listOfCourses[i].toLowerCase();
     var arrayOfKeywords = listOfKeywords[i].split('; ');
 
@@ -116,8 +117,8 @@ function constructJSON(count) {
       course = 'Error';
 
     arrayOfKeywords.forEach(function(keyword, index) {
-      // Ditch invalid characters Keys must be non-empty strings and can't contain ".", "#", "$", "/", "[", or "]"
-      if (keyword.length == 0)
+      // Ditch invalid characters - Keys must be non-empty strings and can't contain ".", "#", "$", "/", "[", or "]"
+      if (keyword.length == 0 || keyword.length > 100)
         keyword = "Error";
 
       invalidCharacters.forEach(function(character, index) {
@@ -137,14 +138,14 @@ function constructJSON(count) {
         if (keywords[keyword][course] != undefined) {
           // The course has already been encountered for this keyword. So get the count, and increment it.
           var count = keywords[keyword][course] + 1;
-          keywords[keyword] = JSON.parse('{ ' + keywordObject + ', "' + course + '": ' + parseInt(Math.random() * 20 + 1) + ' }');
+          keywords[keyword] = JSON.parse('{ ' + keywordObject + ', "' + course + '": ' + count + ' }');
         } else {
           // First encounter for a particular course
-          keywords[keyword] = JSON.parse('{ ' + keywordObject + ', "' + course + '": ' + parseInt(Math.random() * 20 + 1) + ' }');
+          keywords[keyword] = JSON.parse('{ ' + keywordObject + ', "' + course + '": ' + 1 + ' }');
         }
       } else {
         // Encountering the keyword for the first time
-        keywords[keyword] = JSON.parse('{ "' + course + '": ' + parseInt(Math.random() * 20 + 1) + '}');
+        keywords[keyword] = JSON.parse('{ "' + course + '": ' + 1 + '}');
       }
 
       keywords[keyword].total = 0;
