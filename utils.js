@@ -22,7 +22,7 @@ exports.generateKey = function(reference) {
 
 exports.fetch = function(reference) {
   firebase.database().ref(reference).once('value')
-    .thne(function(snapshot) {
+    .then(function(snapshot) {
       console.log(snapshot.value());
     })
     .catch(function(e) {
