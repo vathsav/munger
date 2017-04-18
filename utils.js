@@ -16,6 +16,10 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 
+exports.generateKey = function(reference) {
+  return firebase.database().ref("keywords").child(reference).push().key;
+}
+
 exports.fetch = function(reference) {
   firebase.database().ref(reference).once('value')
     .thne(function(snapshot) {
@@ -50,8 +54,20 @@ exports.remove = function(reference) {
   firebase.database().ref(reference).remove()
     .then(function() {
       console.log("Updated successfully");
+      process.exit();
     })
     .catch(function(e) {
       console.log("Failed to delete :( " + e);
+    });
+}
+
+exports.chainedUpdate = function(data) {
+  firebase.database().ref().update(data)
+    .then(function() {
+      console.log("Updated successfully");
+      process.exit();
+    })
+    .catch(function(e) {
+      console.log("Failed to update :( " + e);
     });
 }

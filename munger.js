@@ -22,6 +22,7 @@ var invalidCharacters = ['.', '#', '$', '/', '[', ']', '\n', '\r'];
 var numberOfSheets = 1;
 var data;
 var columnData;
+var updates = {};
 
 var spinner = ora('Chunking your data').start();
 spinner.color = 'yellow';
@@ -43,11 +44,11 @@ var displaySelector = function(titles) {
       output: process.stdout
     });
 
-    reader.question('\nEnter the number of records to parse: ', (count, err) => {
+    reader.question('\nThere are ' + columnData.length + ' records in total. Enter the number of records to parse: ', (count, err) => {
       if (err)
         console.log(err);
 
-      constructJSON(columnData.length, choices);
+      constructJSON(count, choices);
       reader.close();
     });
   });
@@ -94,9 +95,10 @@ function constructJSON(count, choices) {
   var listOfTypesOfTheses = [];
 
   for (var i = 0; i < count; i++) {
-    if (columnData[i][9].includes(',')) {
+    // Keywords
+    if (columnData[i][11].includes(',')) {
       // Make sure
-      columnData[i][9].replace(',', ';');
+      columnData[i][11].replace(',', ';');
     }
 
     listOfAuthors.push(columnData[i][0]);
@@ -123,6 +125,26 @@ function constructJSON(count, choices) {
     var course = listOfCourses[i].toLowerCase();
     var arrayOfKeywords = listOfKeywords[i].split('; ');
 
+    // TODO: Push metadata into the individual keyword objects
+    // TODO: Make the metadata object construction dynamic
+
+    var metaData = {};
+
+    metaData.author = listOfAuthors[i].toLowerCase();
+    metaData.academic_year = listOfAcademicYears[i];
+    metaData.date = listOfDates[i];
+    metaData.relator = listOfRelatores[i].toLowerCase();
+    metaData.correlator = listOfCorrelators[i].toLowerCase();
+    metaData.course = course;
+    metaData.school = listOfSchools[i].toLowerCase();
+    metaData.access = listOfAccesses[i].toLowerCase();
+    metaData.degree_type = listOfDegreeTypes[i].toLowerCase();
+    metaData.handle = listOfHandles[i].toLowerCase();
+    metaData.language = listOfLanguages[i].toLowerCase();
+    metaData.ssd = listOfSSDs[i].toLowerCase();
+    metaData.title = listOfTitles[i].toLowerCase();
+    metaData.thesis_type = listOfTypesOfTheses[i].toLowerCase().substring();
+
     if (course.length == 0)
       course = 'Error';
 
@@ -141,71 +163,36 @@ function constructJSON(count, choices) {
 
       // Check if key is already present in the object
       if (keys[key] != undefined) {
-        // Check if data already been encountered for this key
+        // Check if the course has already been encountered for this keyword
         var object = JSON.stringify(keys[key]);
         object = object.substring(1, object.length - 1);
 
         if (keys[key][course] != undefined) {
-          // The course has already been encountered for this key. So get the count, and increment it.
+          // The course has already been encountered for this keyword. So get the count, and increment it.
           var count = keys[key][course] + 1;
-          keys[key] = JSON.parse('{ ' + object + ', "' + course + '": ' + count
-              + ', "author": "' + listOfAuthors[i]
-              // + '", "academic_year": "' + listOfAcademicYears[i]
-              // + '", "date": "' + listOfDates[i]
-              // + '", "relators": "' + listOfRelatores[i]
-              // + '", "correlators": "' + listOfCorrelators[i]
-              // + '", "access": "' + listOfAccesses[i]
-              // + '", "degree_type": "' + listOfDegreeTypes[i]
-              // + '", "handle": "' + listOfHandles[i]
-              // + '", "keyword_it": "' + listOfKeywordsEN[i]
-              // + '", "ssd": "' + listOfSSDs[i]
-              // + '", "title": "' + listOfTitles[i]
-              + '", "type": "' + listOfTypesOfTheses[i]
-              + '"}'
-            );
+          keys[key] = JSON.parse('{ ' + object + ', "' + course + '": ' + count + ' }');
         } else {
           // First encounter for a particular course
-          keys[key] = JSON.parse('{ ' + object + ', "' + course + '": ' + 1
-            + ', "author": "' + listOfAuthors[i]
-            // + '", "academic_year": "' + listOfAcademicYears[i]
-            // + '", "date": "' + listOfDates[i]
-            // + '", "relators": "' + listOfRelatores[i]
-            // + '", "correlators": "' + listOfCorrelators[i]
-            // + '", "access": "' + listOfAccesses[i]
-            // + '", "degree_type": "' + listOfDegreeTypes[i]
-            // + '", "handle": "' + listOfHandles[i]
-            // + '", "keyword_it": "' + listOfKeywordsEN[i]
-            // + '", "ssd": "' + listOfSSDs[i]
-            // + '", "title": "' + listOfTitles[i]
-            + '", "type": "' + listOfTypesOfTheses[i]
-            + '"}'
-          );
+          keys[key] = JSON.parse('{ ' + object + ', "' + course + '": ' + 1 + ' }');
         }
       } else {
-        // Encountering the key for the first time
-        keys[key] = JSON.parse('{ "' + course + '": ' + 1
-            + ', "author": "' + listOfAuthors[i]
-            // + '", "academic_year": "' + listOfAcademicYears[i]
-            // + '", "date": "' + listOfDates[i]
-            // + '", "relators": "' + listOfRelatores[i]
-            // + '", "correlators": "' + listOfCorrelators[i]
-            // + '", "access": "' + listOfAccesses[i]
-            // + '", "degree_type": "' + listOfDegreeTypes[i]
-            // + '", "handle": "' + listOfHandles[i]
-            // + '", "keyword_it": "' + listOfKeywordsEN[i]
-            // + '", "ssd": "' + listOfSSDs[i]
-            // + '", "title": "' + listOfTitles[i]
-            + '", "type": "' + listOfTypesOfTheses[i]
-            + '"}'
-          );
+       // Encountering the keyword for the first time
+       keys[key] = JSON.parse('{ "' + course + '": ' + 1 + '}');
       }
 
       keys[key].total = 0;
       keys[key].total = d3.sum(d3.values(keys[key]));
+
+      // Push to the metadata to reference
+      // TODO: Show progress .. this takes forever.
+      updates['/keywords/' + key + '/' + utils.generateKey(key)] = metaData;
     });
   }
 
   // TODO: Promt Firebase reference to push to
 
   utils.push('/keywords', keys);
+
+  // Either all updates succeed or all updates fail
+  utils.chainedUpdate(updates);
 }
