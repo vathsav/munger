@@ -23,7 +23,7 @@ exports.generateKey = function(reference) {
 exports.fetch = function(reference) {
   firebase.database().ref(reference).once('value')
     .then(function(snapshot) {
-      console.log(snapshot.value());
+      console.log(snapshot.val());
     })
     .catch(function(e) {
       console.log("Failed to fetch :( " + e);
