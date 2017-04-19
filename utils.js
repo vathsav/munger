@@ -17,13 +17,13 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 exports.generateKey = function(reference) {
-  return firebase.database().ref("keywords").child(reference).push().key;
+  return firebase.database().ref("metadata").child(reference).push().key;
 }
 
 exports.fetch = function(reference) {
   firebase.database().ref(reference).once('value')
     .then(function(snapshot) {
-      console.log(snapshot.val());
+      console.log(snapshot.value());
     })
     .catch(function(e) {
       console.log("Failed to fetch :( " + e);
@@ -65,9 +65,28 @@ exports.chainedUpdate = function(data) {
   firebase.database().ref().update(data)
     .then(function() {
       console.log("Updated successfully");
-      process.exit();
+      // process.exit();
     })
     .catch(function(e) {
       console.log("Failed to update :( " + e);
     });
+}
+
+exports.largeChainedUpdate = function(data) {
+  // TODO: Split and push because of write length limits
+
+  var length = data.length;
+  var threshold = 5;
+
+  for (var startingPoint = 0; startingPoint < length; startingPoint += threshold){
+    var chunk = data.slice(startingPoint, startingPoint + threshold);
+
+    firebase.database().ref().set(chunk)
+      .then(function() {
+        console.log("Pushed " + startingPoint);
+      })
+      .catch(function(e) {
+        console.log("Failed to update :( " + e);
+      });
+  }
 }

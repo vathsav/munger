@@ -23,6 +23,7 @@ var numberOfSheets = 1;
 var data;
 var columnData;
 var updates = {};
+var updatesKeywords = {};
 
 var spinner = ora('Chunking your data').start();
 spinner.color = 'yellow';
@@ -129,6 +130,7 @@ function constructJSON(count, choices) {
     // TODO: Make the metadata object construction dynamic
 
     var metaData = {};
+    var metaDataSmall = {};
 
     metaData.author = listOfAuthors[i].toLowerCase();
     metaData.academic_year = listOfAcademicYears[i];
@@ -144,6 +146,9 @@ function constructJSON(count, choices) {
     metaData.ssd = listOfSSDs[i].toLowerCase();
     metaData.title = listOfTitles[i].toLowerCase();
     metaData.thesis_type = listOfTypesOfTheses[i].toLowerCase().substring();
+
+    metaDataSmall.academic_year = listOfAcademicYears[i];
+    metaDataSmall.course = course;
 
     if (course.length == 0)
       course = 'Error';
@@ -185,14 +190,20 @@ function constructJSON(count, choices) {
 
       // Push to the metadata to reference
       // TODO: Show progress .. this takes forever.
-      updates['/keywords/' + key + '/' + utils.generateKey(key)] = metaData;
+      updates['/metadata/' + key + '/' + utils.generateKey(key)] = metaData;
+      updatesKeywords['/keywords/' + key + '/' + utils.generateKey(key)] = metaDataSmall;
     });
   }
 
   // TODO: Promt Firebase reference to push to
 
-  utils.push('/keywords', keys);
+  // utils.push('/keywords', keys);
+  // utils.push('/metadata', {});
+  // utils.push('/keywords', {});
+
+
 
   // Either all updates succeed or all updates fail
   utils.chainedUpdate(updates);
+  utils.chainedUpdate(updatesKeywords);
 }
