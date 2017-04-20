@@ -198,12 +198,12 @@ function constructJSON(count, choices) {
   // TODO: Promt Firebase reference to push to
 
   // utils.push('/keywords', keys);
-  // utils.push('/metadata', {});
+  utils.push('/metadata', {});
   // utils.push('/keywords', {});
 
 
 
   // Either all updates succeed or all updates fail
   utils.chainedUpdate(updates);
-  utils.chainedUpdate(updatesKeywords);
+  // utils.chainedUpdate(updatesKeywords);
 }

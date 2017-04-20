@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/vathsav/munger#readme",
   "dependencies": {
+    "array-slice": "^1.0.0",
     "cli-spinners": "^1.0.0",
     "d3": "^4.7.3",
     "excel": "^0.1.7",
