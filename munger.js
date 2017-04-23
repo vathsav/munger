@@ -124,6 +124,7 @@ function constructJSON(count, choices) {
   // Omit the titles of the columns. Iterate from index 1.
   for (var i = 1; i < count; i++) {
     var course = listOfCourses[i].toLowerCase();
+    var year = listOfAcademicYears[i].replace('/', '-');
     var arrayOfKeywords = listOfKeywords[i].split('; ');
 
     // TODO: Push metadata into the individual keyword objects
@@ -168,42 +169,46 @@ function constructJSON(count, choices) {
 
       // Check if key is already present in the object
       if (keys[key] != undefined) {
-        // Check if the course has already been encountered for this keyword
-        var object = JSON.stringify(keys[key]);
-        object = object.substring(1, object.length - 1);
 
-        if (keys[key][course] != undefined) {
-          // The course has already been encountered for this keyword. So get the count, and increment it.
-          var count = keys[key][course] + 1;
-          keys[key] = JSON.parse('{ ' + object + ', "' + course + '": ' + count + ' }');
+        // Check if the year is already present in the keyword object
+        if (keys[key][year] != undefined) {
+          // Check if the course has already been encountered for this keyword
+          var object = JSON.stringify(keys[key][year]);
+          object = object.substring(1, object.length - 1);
+
+          if (keys[key][year][course] != undefined) {
+            // The course has already been encountered for this keyword. So get the count, and increment it.
+            var count = keys[key][year][course] + 1;
+            keys[key][year] = JSON.parse('{ ' + object + ', "' + course + '": ' + count + ' }');
+          } else {
+            // First encounter for a particular course
+            keys[key][year] = JSON.parse('{ ' + object + ', "' + course + '": ' + 1 + ' }');
+          }
         } else {
-          // First encounter for a particular course
-          keys[key] = JSON.parse('{ ' + object + ', "' + course + '": ' + 1 + ' }');
+         // Encountering the keyword for the first time
+         keys[key][year] = JSON.parse('{ "' + course + '": ' + 1 + '}');
         }
       } else {
-       // Encountering the keyword for the first time
-       keys[key] = JSON.parse('{ "' + course + '": ' + 1 + '}');
+        keys[key] = {};
+        keys[key][year] = JSON.parse('{ "' + course + '": ' + 1 + '}');
       }
 
-      keys[key].total = 0;
-      keys[key].total = d3.sum(d3.values(keys[key]));
-
+      keys[key][year].total = 0;
+      keys[key][year].total = d3.sum(d3.values(keys[key][year]));
       // Push to the metadata to reference
       // TODO: Show progress .. this takes forever.
-      updates['/metadata/' + key + '/' + utils.generateKey(key)] = metaData;
-      updatesKeywords['/keywords/' + key + '/' + utils.generateKey(key)] = metaDataSmall;
+      // updates['/metadata/' + key + '/' + utils.generateKey(key)] = metaData;
+      // updatesKeywords['/keywords/' + key + '/' + utils.generateKey(key)] = metaDataSmall;
     });
   }
 
+
   // TODO: Promt Firebase reference to push to
 
-  // utils.push('/keywords', keys);
-  utils.push('/metadata', {});
-  // utils.push('/keywords', {});
-
-
+  utils.push('/keywords', keys);
+  // utils.push('/metadata', {});
 
   // Either all updates succeed or all updates fail
-  utils.chainedUpdate(updates);
+  // utils.chainedUpdate(updates);
   // utils.chainedUpdate(updatesKeywords);
 }
